@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace ClasseGeometrie.Forme
 {
-    public class Rectangle
+    public class Rectangle : CalculerForme
     {
         private double _largeur;
         private double _hauteur;
+
+        /// <summary>
+        /// Constructeur du rectangle.
+        /// </summary>
+        /// <param name="largeur">Taille de la Largeur.</param>
+        /// <param name="hauteur">Taille de la hauteur</param>
 
         public Rectangle(double largeur, double hauteur)
         {
@@ -20,19 +26,23 @@ namespace ClasseGeometrie.Forme
         public double Largeur { get => _largeur; set => _largeur = value; }
         public double Hauteur { get => _hauteur; set => _hauteur = value; }
 
-        public double CalculerPerimetreRectangle()
+        public override double Perimetre()
         {
             double perimetre = 2 * (this.Largeur + this.Hauteur);
             return perimetre;
         }
-        public double CalculerAireRectangle()
+        public override double Aire()
         {
             double aire = this.Largeur * this.Hauteur;
             return aire;
         }
+        /// <summary>
+        /// Méthode permettant d'afficher les informations du rectangle.
+        /// </summary>
+        /// <returns>Les informations d'un rectangle. </returns>
         public override string ToString()
         {
-            return "Rectangle - Largeur (l): " + this.Largeur + ", Hauteur (h): " + this.Hauteur + ", Périmètre: " + CalculerPerimetreRectangle() + ", Aire: " + CalculerAireRectangle();
+            return "Rectangle - Largeur (l): " + this.Largeur + ", Hauteur (h): " + this.Hauteur + ", Périmètre: " + Perimetre() + ", Aire: " + Aire();
         }
     }
 

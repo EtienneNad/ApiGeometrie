@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClasseGeometrie.Forme
 {
-    public class Trapeze
+    public class Trapeze:CalculerForme
     {
         private double _grandeBase;
         private double _petiteBase;
@@ -15,7 +15,14 @@ namespace ClasseGeometrie.Forme
         private double _coteB;
 
 
-
+        /// <summary>
+        /// Constructeur du trapèze.
+        /// </summary>
+        /// <param name="grandeBase">Taille de la grande base.</param>
+        /// <param name="petiteBase">Taille de la petite base.</param>
+        /// <param name="hauteur">Taille de la hauteur.</param>
+        /// <param name="coteA">Taille du côté A.</param>
+        /// <param name="coteB">Taille du côté B.</param>
         public Trapeze(double grandeBase, double petiteBase, double hauteur, double coteA, double coteB)
         {
             _grandeBase = grandeBase;
@@ -30,23 +37,27 @@ namespace ClasseGeometrie.Forme
         public double CoteA { get => _coteA; set => _coteA = value; }
         public double CoteB { get => _coteB; set => _coteB = value; }
 
-        public double CalculerPerimetreTrapeze()
+        public override double Perimetre()
         {
             double perimetre = this.CoteA + this.CoteB + this.PetiteBase + this.GrandeBase;
             return perimetre;
         }
 
-        public double CalculerAireTrapeze()
+        public override double Aire()
         {
             double calculeBases = this.GrandeBase +this.PetiteBase;
             double aire = (calculeBases) * this.Hauteur/2;
             return aire;
         }
+        /// <summary>
+        /// Méthode permettant d'afficher les informations du trapèze.
+        /// </summary>
+        /// <returns>Les informations d'un trapèze. </returns>
         public override string ToString()
         {
 
             return "Trapèze - Grande Base (g): " + this.GrandeBase + "Petite Base (p):" + this.PetiteBase + ", Hauteur (h): " + this.Hauteur + ", Côté (a): " + this._coteA + 
-                ", Côté (b): " + this.CoteB + ", Périmètre: " + CalculerPerimetreTrapeze() + ", Aire: " + CalculerAireTrapeze();
+                ", Côté (b): " + this.CoteB + ", Périmètre: " + Perimetre() + ", Aire: " + Aire();
         }
 
         

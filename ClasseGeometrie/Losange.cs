@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace ClasseGeometrie.Forme
 {
-    public class Losange
+    public class Losange : CalculerForme
     {
         private double _grandeDiagonale;
         private double _petiteDiagonale;
-
+        /// <summary>
+        /// Constructeur du losange.
+        /// </summary>
+        /// <param name="grandeDiagonale">Taille de la grande diagonale.</param>
+        /// <param name="petiteDiagonale">Taille de la petite diagonale.</param>
         public Losange(double grandeDiagonale, double petiteDiagonale)
         {
             GrandeDiagonale = grandeDiagonale;
@@ -20,7 +24,7 @@ namespace ClasseGeometrie.Forme
         public double GrandeDiagonale { get => _grandeDiagonale; set => _grandeDiagonale = value; }
         public double PetiteDiagonale { get => _petiteDiagonale; set => _petiteDiagonale = value; }
 
-        public double CalculerPerimetreLosange()
+        public override double Perimetre()
         {
             double diagonaleG = Math.Pow(this.GrandeDiagonale, 2);
             double diagonaleP = Math.Pow(this.PetiteDiagonale, 2);
@@ -29,14 +33,18 @@ namespace ClasseGeometrie.Forme
             return perimetre;
             
         }
-        public double CalculerAireLosange()
+        public override double Aire()
         {
             double aire = this.GrandeDiagonale * this.PetiteDiagonale / 2;
             return aire;
         }
+        /// <summary>
+        /// Méthode permettant d'afficher les informations du losange.
+        /// </summary>
+        /// <returns>Les informations d'un losange. </returns>
         public override string ToString()
         {
-            return "Losange - Grande Diagonale (g): " + this.GrandeDiagonale + ", Petite Diagonale (p): " + this.PetiteDiagonale + ", Périmètre: " + CalculerPerimetreLosange() + ", Aire: " + CalculerAireLosange();
+            return "Losange - Grande Diagonale (g): " + this.GrandeDiagonale + ", Petite Diagonale (p): " + this.PetiteDiagonale + ", Périmètre: " + Perimetre() + ", Aire: " + Aire();
         }
 
        

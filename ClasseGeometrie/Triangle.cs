@@ -2,7 +2,7 @@
 
 namespace ClasseGeometrie.Forme
 {
-    public class Triangle
+    public class Triangle : CalculerForme
     {
         private double _baseB;
         private double _hauteur;
@@ -10,7 +10,13 @@ namespace ClasseGeometrie.Forme
         private double _coteC;
 
         
-
+        /// <summary>
+        /// Constructeur du triangle. 
+        /// </summary>
+        /// <param name="baseB">Taille de la base.</param>
+        /// <param name="hauteur">Taille de la hauteur.</param>
+        /// <param name="coteA">Taille du côté A.</param>
+        /// <param name="coteC">Taille du côté C.</param>
         public Triangle(double baseB, double hauteur, double coteA, double coteC)
         {
             _baseB = baseB;
@@ -25,24 +31,28 @@ namespace ClasseGeometrie.Forme
         public double CoteC { get => _coteC; set => _coteC = value; }
 
 
-        public double CalculerPerimetreTriangle()
+        public override double Perimetre()
         {
             double perimetre = this.CoteA + this.BaseB + this.CoteC;
             perimetre = Math.Round(perimetre, 4);
             return perimetre;
         }
 
-        public double CalculerAireTriangle()
+        public override double Aire()
         {
             double aire = ( this.BaseB * this.Hauteur)/2;
             aire = Math.Round(aire, 4);
             return aire;
         }
+        /// <summary>
+        /// Méthode permettant d'afficher les informations du triangle.
+        /// </summary>
+        /// <returns>Les informations d'un triangle. </returns>
 
         public override string ToString()
         {
 
-            return "Triangle - Base (b): " + this.BaseB + ", Hauteur (h): "+ this.Hauteur + ", Côté (a): "+ this._coteA + ", Côté (c): " + this.CoteC + ", Périmètre: " + CalculerPerimetreTriangle() + ", Aire: " + CalculerAireTriangle();
+            return "Triangle - Base (b): " + this.BaseB + ", Hauteur (h): "+ this.Hauteur + ", Côté (a): "+ this._coteA + ", Côté (c): " + this.CoteC + ", Périmètre: " + Perimetre() + ", Aire: " + Aire();
         }
 
     }

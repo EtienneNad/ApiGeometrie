@@ -17,7 +17,7 @@ namespace TestGeometrie
             double rayon = 2;
 
             Cercle cercle = new Cercle(rayon);
-            double resultat = cercle.CalculerPerimetreCercle();
+            double resultat = cercle.Perimetre();
 
             Assert.AreEqual(resultat, 12.566);
         }
@@ -29,7 +29,7 @@ namespace TestGeometrie
             double rayon = 2;
 
             Cercle cercle = new Cercle(rayon);
-            double resultat = cercle.CalculerAireCercle();
+            double resultat = cercle.Aire();
 
             Assert.AreEqual(resultat, 12.566);
         }
@@ -48,7 +48,7 @@ namespace TestGeometrie
             double coteC = 3.25;
             Triangle triangle = new Triangle(baseB, hauteur,coteA,coteC);
 
-            double resultat = triangle.CalculerPerimetreTriangle();
+            double resultat = triangle.Perimetre();
             Assert.AreEqual(resultat, 8.35);
         }
 
@@ -61,7 +61,7 @@ namespace TestGeometrie
             double coteC = 3.25;
             Triangle triangle = new Triangle(baseB, hauteur, coteA, coteC);
 
-            double resultat = triangle.CalculerAireTriangle();
+            double resultat = triangle.Aire();
             Assert.AreEqual(resultat, 3);
         }
         /// <summary>
@@ -76,7 +76,7 @@ namespace TestGeometrie
             double cote = 3;
             
             Carre carre = new Carre(cote);
-            double resultat = carre.CalculerPerimetreCarre();
+            double resultat = carre.Perimetre();
 
             Assert.AreEqual(resultat, 12);
         }
@@ -88,7 +88,7 @@ namespace TestGeometrie
             double cote = 3;
             Carre carre = new Carre(cote);
 
-            double resultat = carre.CalculerAireCarre();
+            double resultat = carre.Aire();
             Assert.AreEqual(resultat, 9);
         }
 
@@ -104,7 +104,7 @@ namespace TestGeometrie
                 double largeur = 2;
                 double hauteur = 3;
                 Rectangle rectangle = new Rectangle(largeur, hauteur);
-                double resultat = rectangle.CalculerPerimetreRectangle();
+                double resultat = rectangle.Perimetre();
 
                 Assert.AreEqual(resultat, 10);
             }
@@ -117,7 +117,7 @@ namespace TestGeometrie
                 double hauteur = 3;
                 Rectangle rectangle = new Rectangle(largeur, hauteur);
 
-                double resultat = rectangle.CalculerAireRectangle();
+                double resultat = rectangle.Aire();
                 Assert.AreEqual(resultat, 6);
             }
         /// <summary>
@@ -133,7 +133,7 @@ namespace TestGeometrie
             double petiteDiagonale = 3;
             Losange losange = new Losange(grandeDiagonale, petiteDiagonale);
 
-            double resultat = losange.CalculerPerimetreLosange();
+            double resultat = losange.Perimetre();
             Assert.AreEqual(resultat, 10);
         }
 
@@ -144,7 +144,7 @@ namespace TestGeometrie
             double petiteDiagonale = 3;
             Losange losange = new Losange(grandeDiagonale, petiteDiagonale);
 
-            double resultat = losange.CalculerAireLosange();
+            double resultat = losange.Aire();
             Assert.AreEqual(resultat, 6);
         }
 
@@ -164,7 +164,7 @@ namespace TestGeometrie
             double coteB = 1.8;
             Trapeze trapeze = new Trapeze(grandeBase, petiteBase, hauteur, coteA, coteB);
 
-            double resultat = trapeze.CalculerPerimetreTrapeze();
+            double resultat = trapeze.Perimetre();
             Assert.AreEqual(resultat, 8.9);
         }
 
@@ -178,7 +178,7 @@ namespace TestGeometrie
             double coteB = 1.8;
             Trapeze trapeze = new Trapeze(grandeBase,petiteBase,hauteur,coteA, coteB);
 
-            double resultat = trapeze.CalculerAireTrapeze();
+            double resultat = trapeze.Aire();
             Assert.AreEqual(resultat, 3);
         }
 

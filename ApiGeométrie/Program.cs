@@ -20,6 +20,14 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Console.WriteLine(losange);
             Console.WriteLine(trapeze);
 
+            Collection maison = new Collection();
+            maison.ajouterForme(new Carre(2), new Vecteur2(0, 0));
+            maison.ajouterForme(new Triangle(2, 1.5, 2.5, 2.5), new Vecteur2(0, 1.75));
+            Console.WriteLine( maison.AireTotale());
+            Console.WriteLine(maison.PerimetreTotale());
+
+            //Console.WriteLine($"Aire Totale: {maison.AireTotale()}"); // Output: 5.5
+            //Console.WriteLine($"Perimetre Total: {maison.PerimetreTotal()}"); // Output: Perimeter of all shapes combined
             //double resultatAire = Cercle.CalculerAireCercle(2);
 
             //Console.WriteLine(resultatAire + '\n');

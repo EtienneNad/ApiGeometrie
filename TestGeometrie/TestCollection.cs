@@ -17,6 +17,21 @@ namespace TestGeometrie
 
             double resultatPerimeteMaison = maison.PerimetreTotale();
             double resultatAireMaison = maison.AireTotale();
+
+            /***********************************************************************************************
+             * Dans la surchage du AreEqual, si l'on travaille avec des double ou float, il y a un troisième 
+             * paramètre (appelé delta) qui vérifie la précision avec la laquelle faire la vérification. Si la 
+             * différence entre les deux valeurs est plus petite que delta, alors le test est accepté
+             * 
+             * Par exemple 
+             * Assert.AreEqual(10.0, 9.9999, 0.01) est considéré correct, car 10.0 - 9.99999 = 0.0001 < 0.01 => TEST OK
+             * Assert.AreEqual(10.0, 9.9, 0.01) est considéré incorrect, car 10.0 - 9.9 = 0.1 > 0.01 ERREUR
+             * 
+             * La vérification avec un nombre plus grand fonctionne aussi Assert.AreEqual(10.0, 10.0001, 0.001) est correct.
+             * 
+             * Peux-tu réécrire tes tests avec des doubles en utilisant le paramètre delta ?
+             */
+
             Assert.AreEqual(15, resultatPerimeteMaison);
             Assert.AreEqual(5.5, resultatAireMaison);
         }

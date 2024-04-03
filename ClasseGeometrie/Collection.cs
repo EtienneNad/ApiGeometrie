@@ -5,7 +5,11 @@ namespace ClasseGeometrie.Forme
 {
     public class Collection
     {
-
+        /***********************************************************************************************
+         * Ici l'astuce des tuples fonctionne, mais les tuples peuvent causer des problèmes à moyen terme
+         * 
+         * Peux-tu penser à une autre façon de gérer la donnée position ?
+         */
         private List<(FormeGeometrique forme, Vecteur2 position)> listeForme;
 
         /// <summary>

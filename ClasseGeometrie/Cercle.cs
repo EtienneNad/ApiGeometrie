@@ -2,7 +2,7 @@
 
 namespace ClasseGeometrie.Forme
 {
-    public class Cercle : CalculerForme
+    public class Cercle : FormeGeometrique
     {
         private double _rayon;
 
@@ -23,14 +23,14 @@ namespace ClasseGeometrie.Forme
         {
             double pie = Math.PI;
             double perimetre = 2 * pie * this.Rayon;
-            perimetre = Math.Round(perimetre, 3);
+            //perimetre = Math.Round(perimetre, 3);
             return perimetre;
         }
         public override double Aire()
         {
             double pie = Math.PI;
             double aire = pie * Math.Pow(this.Rayon, 2);
-            aire = Math.Round(aire, 3);
+            //aire = Math.Round(aire, 3);
             return aire;
         }
 

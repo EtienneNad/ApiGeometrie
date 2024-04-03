@@ -32,8 +32,8 @@ namespace TestGeometrie
              * Peux-tu réécrire tes tests avec des doubles en utilisant le paramètre delta ?
              */
 
-            Assert.AreEqual(15, resultatPerimeteMaison);
-            Assert.AreEqual(5.5, resultatAireMaison);
+            Assert.AreEqual(15, resultatPerimeteMaison, 0.01);
+            Assert.AreEqual(5.5, resultatAireMaison,0.01);
         }
 
         [TestMethod]
@@ -48,8 +48,8 @@ namespace TestGeometrie
 
             double resultatPerimeteCarreLosange = carreLozange.PerimetreTotale();
             double resultatAireCarreLosange = carreLozange.AireTotale();
-            Assert.AreEqual(22.0, resultatPerimeteCarreLosange);
-            Assert.AreEqual(15.0, resultatAireCarreLosange);
+            Assert.AreEqual(22.0, resultatPerimeteCarreLosange, 0.01);
+            Assert.AreEqual(15.0, resultatAireCarreLosange, 0.01);
         }
 
         [TestMethod]
@@ -64,8 +64,8 @@ namespace TestGeometrie
 
             double resultatPerimeteTete = tete.PerimetreTotale();
             double resultatAireTete = tete.AireTotale();
-            Assert.AreEqual(22.566, resultatPerimeteTete);
-            Assert.AreEqual(18.566, resultatAireTete);
+            Assert.AreEqual(22.566, resultatPerimeteTete, 0.01);
+            Assert.AreEqual(18.566, resultatAireTete, 0.01);
         }
 
         [TestMethod]
@@ -75,13 +75,13 @@ namespace TestGeometrie
         {
             Collection triangleTrapeze = new Collection();
 
-            triangleTrapeze.ajouterForme(new Triangle(2, 1.5, 2.5, 2.5), new Vecteur2(0, 0));
+            triangleTrapeze.ajouterForme(new Triangle(2, 3, 3.1, 3.25), new Vecteur2(0, 0));
             triangleTrapeze.ajouterForme(new Trapeze(4,2,1,1.1,1.8), new Vecteur2(0, 1.75));
 
             double resultatPerimeteTriangleTrapeze = triangleTrapeze.PerimetreTotale();
             double resultatAireTriangleTrapeze = triangleTrapeze.AireTotale();
-            Assert.AreEqual(17.25, resultatPerimeteTriangleTrapeze);
-            Assert.AreEqual(6, resultatAireTriangleTrapeze);
+            Assert.AreEqual(17.25, resultatPerimeteTriangleTrapeze, 0.01);
+            Assert.AreEqual(6, resultatAireTriangleTrapeze, 0.01);
         }
     }
 

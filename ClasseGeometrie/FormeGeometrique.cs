@@ -14,7 +14,7 @@ namespace ClasseGeometrie.Forme
      * 
      * Peux-tu penser à un meilleur nom pour ta classe abstraite ?
      */
-    public abstract class CalculerForme
+    public abstract class FormeGeometrique
     {
         /// <summary>
         /// Méthode permettant de calculer l'aire de la forme.

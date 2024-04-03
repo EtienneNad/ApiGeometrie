@@ -2,7 +2,7 @@
 
 namespace ClasseGeometrie.Forme
 {
-    public class Triangle : CalculerForme
+    public class Triangle : FormeGeometrique
     {
         private double _baseB;
         private double _hauteur;
@@ -34,14 +34,14 @@ namespace ClasseGeometrie.Forme
         public override double Perimetre()
         {
             double perimetre = this.CoteA + this.BaseB + this.CoteC;
-            perimetre = Math.Round(perimetre, 4);
+            //perimetre = Math.Round(perimetre, 4);
             return perimetre;
         }
 
         public override double Aire()
         {
             double aire = ( this.BaseB * this.Hauteur)/2;
-            aire = Math.Round(aire, 4);
+            //aire = Math.Round(aire, 4);
             return aire;
         }
         /// <summary>

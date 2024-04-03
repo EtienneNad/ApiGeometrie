@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClasseGeometrie.Forme
 {
-    public class Trapeze:CalculerForme
+    public class Trapeze:FormeGeometrique
     {
         private double _grandeBase;
         private double _petiteBase;

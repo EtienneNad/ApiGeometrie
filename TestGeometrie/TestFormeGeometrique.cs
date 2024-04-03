@@ -19,7 +19,7 @@ namespace TestGeometrie
             Cercle cercle = new Cercle(rayon);
             double resultat = cercle.Perimetre();
 
-            Assert.AreEqual(resultat, 12.566);
+            Assert.AreEqual(12.566, resultat, 0.01 );
         }
 
         [TestMethod]
@@ -31,7 +31,7 @@ namespace TestGeometrie
             Cercle cercle = new Cercle(rayon);
             double resultat = cercle.Aire();
 
-            Assert.AreEqual(resultat, 12.566);
+            Assert.AreEqual(12.566, resultat, 0.01);
         }
         /// <summary>
         /// Test pour le périmètre et l'aire du Triangle
@@ -49,7 +49,7 @@ namespace TestGeometrie
             Triangle triangle = new Triangle(baseB, hauteur,coteA,coteC);
 
             double resultat = triangle.Perimetre();
-            Assert.AreEqual(resultat, 8.35);
+            Assert.AreEqual(8.35, resultat, 0.01);
         }
 
         [TestMethod]
@@ -62,7 +62,7 @@ namespace TestGeometrie
             Triangle triangle = new Triangle(baseB, hauteur, coteA, coteC);
 
             double resultat = triangle.Aire();
-            Assert.AreEqual(resultat, 3);
+            Assert.AreEqual(3, resultat, 0.01);
         }
         /// <summary>
         /// Test pour le périmètre et l'aire du carré
@@ -78,7 +78,7 @@ namespace TestGeometrie
             Carre carre = new Carre(cote);
             double resultat = carre.Perimetre();
 
-            Assert.AreEqual(resultat, 12);
+            Assert.AreEqual(12, resultat, 0.01);
         }
 
         [TestMethod]
@@ -89,7 +89,7 @@ namespace TestGeometrie
             Carre carre = new Carre(cote);
 
             double resultat = carre.Aire();
-            Assert.AreEqual(resultat, 9);
+            Assert.AreEqual(9,resultat, 0.01);
         }
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace TestGeometrie
                 Rectangle rectangle = new Rectangle(largeur, hauteur);
                 double resultat = rectangle.Perimetre();
 
-                Assert.AreEqual(resultat, 10);
+                Assert.AreEqual(10, resultat, 0.01);
             }
      
             [TestMethod]
@@ -118,7 +118,7 @@ namespace TestGeometrie
                 Rectangle rectangle = new Rectangle(largeur, hauteur);
 
                 double resultat = rectangle.Aire();
-                Assert.AreEqual(resultat, 6);
+                Assert.AreEqual(6,resultat, 0.01);
             }
         /// <summary>
         /// Test pour le périmètre et l'aire du Losange
@@ -134,7 +134,7 @@ namespace TestGeometrie
             Losange losange = new Losange(grandeDiagonale, petiteDiagonale);
 
             double resultat = losange.Perimetre();
-            Assert.AreEqual(resultat, 10);
+            Assert.AreEqual(10, resultat, 0.01);
         }
 
         [TestMethod]
@@ -145,7 +145,7 @@ namespace TestGeometrie
             Losange losange = new Losange(grandeDiagonale, petiteDiagonale);
 
             double resultat = losange.Aire();
-            Assert.AreEqual(resultat, 6);
+            Assert.AreEqual(6, resultat, 0.01);
         }
 
         /// <summary>
@@ -165,7 +165,7 @@ namespace TestGeometrie
             Trapeze trapeze = new Trapeze(grandeBase, petiteBase, hauteur, coteA, coteB);
 
             double resultat = trapeze.Perimetre();
-            Assert.AreEqual(resultat, 8.9);
+            Assert.AreEqual(8.9, resultat, 0.01);
         }
 
         [TestMethod]
@@ -179,7 +179,7 @@ namespace TestGeometrie
             Trapeze trapeze = new Trapeze(grandeBase,petiteBase,hauteur,coteA, coteB);
 
             double resultat = trapeze.Aire();
-            Assert.AreEqual(resultat, 3);
+            Assert.AreEqual(3, resultat, 0.01);
         }
 
     }

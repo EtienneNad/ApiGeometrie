@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClasseGeometrie.Forme
 {
-    public class Rectangle : CalculerForme
+    public class Rectangle : FormeGeometrique
     {
         private double _largeur;
         private double _hauteur;

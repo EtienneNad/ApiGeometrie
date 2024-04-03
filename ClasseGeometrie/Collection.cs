@@ -5,18 +5,15 @@ namespace ClasseGeometrie.Forme
 {
     public class Collection
     {
-        /***********************************************************************************************
-         * Ici l'astuce des tuples fonctionne, mais les tuples peuvent causer des problèmes à moyen terme
-         * Peux-tu penser à une autre façon de gérer la donnée position ?
-         */
-        private List<(CalculerForme forme, Vecteur2 position)> listeForme;
+
+        private List<(FormeGeometrique forme, Vecteur2 position)> listeForme;
 
         /// <summary>
         /// Constructeur de collection
         /// </summary>
         public Collection()
         {
-            listeForme = new List<(CalculerForme forme, Vecteur2 position)>();
+            listeForme = new List<(FormeGeometrique forme, Vecteur2 position)>();
         }
 
 
@@ -26,7 +23,7 @@ namespace ClasseGeometrie.Forme
         /// </summary>
         /// <param name="forme">La forme à ajouter.</param>
         /// <param name="position">La ^position de la forme</param>
-        public void ajouterForme(CalculerForme forme, Vecteur2 position)
+        public void ajouterForme(FormeGeometrique forme, Vecteur2 position)
         {
             listeForme.Add((forme, position));
         }
@@ -42,12 +39,6 @@ namespace ClasseGeometrie.Forme
             {
                 aireTotale += formes.Aire();
             }
-
-            /***********************************************************************************************
-             * Je comprends ici que tu te sers de l'arrondi à 3 chiffres pour les tests. Il y a une 
-             * autre technique que je t'explique dans le projet de tests pour gérer le problème des nombres décimaux)
-             */
-            aireTotale = Math.Round(aireTotale, 3);
             return aireTotale;
         }
         /// <summary>
@@ -61,7 +52,6 @@ namespace ClasseGeometrie.Forme
             {
                 perimetreTotale += forme.Perimetre();
             }
-            perimetreTotale = Math.Round(perimetreTotale, 3);
             return perimetreTotale;
         }
     }

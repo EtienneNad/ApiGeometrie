@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClasseGeometrie.Forme
 {
-    public class Losange : CalculerForme
+    public class Losange : FormeGeometrique
     {
         private double _grandeDiagonale;
         private double _petiteDiagonale;

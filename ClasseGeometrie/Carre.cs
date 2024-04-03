@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClasseGeometrie.Forme
 {
-    public class Carre : CalculerForme
+    public class Carre : FormeGeometrique
     {
         private double _cote;
 

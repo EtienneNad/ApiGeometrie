@@ -16,6 +16,19 @@ namespace ClasseGeometrie.Forme
      */
     public abstract class FormeGeometrique
     {
+        private Vecteur2 _position;
+
+        /// <summary>
+        /// Constructeur de la forme géométrique.
+        /// </summary>
+        /// <param name="position">Position de la forme.</param>
+        protected FormeGeometrique(Vecteur2 position)
+        {
+            _position = position;
+        }
+
+        public Vecteur2 Position { get => _position; set => _position = value; }
+
         /// <summary>
         /// Méthode permettant de calculer l'aire de la forme.
         /// </summary>

@@ -10,9 +10,10 @@ namespace TestGeometrie
 
         public void TestCalculerMaison()
         {
+            
             Collection maison = new Collection();
-            maison.ajouterForme(new Carre(2), new Vecteur2(0, 0));
-            maison.ajouterForme(new Triangle(2, 1.5, 2.5, 2.5), new Vecteur2(0, 1.75));
+            maison.ajouterForme(new Carre(2, new Vecteur2(0, 0)));
+            maison.ajouterForme(new Triangle(2, 1.5, 2.5, 2.5, new Vecteur2(0, 1.75)));
 
 
             double resultatPerimeteMaison = maison.PerimetreTotale();
@@ -42,8 +43,8 @@ namespace TestGeometrie
         public void TestCalculerNouvelleForme1()
         {
             Collection carreLozange = new Collection();
-            carreLozange.ajouterForme(new Carre(3), new Vecteur2(0, 0));
-            carreLozange.ajouterForme(new Losange(3,4), new Vecteur2(0, 1.75));
+            carreLozange.ajouterForme(new Carre(3, new Vecteur2(0, 0)));
+            carreLozange.ajouterForme(new Losange(3,4, new Vecteur2(0, 1.75)));
 
 
             double resultatPerimeteCarreLosange = carreLozange.PerimetreTotale();
@@ -58,8 +59,8 @@ namespace TestGeometrie
         public void TestCalculerNouvelleForme2()
         {
             Collection tete = new Collection();
-            tete.ajouterForme(new Rectangle(3, 2), new Vecteur2(0, 0));
-            tete.ajouterForme(new Cercle(2), new Vecteur2(0, 1.75));
+            tete.ajouterForme(new Rectangle(3, 2, new Vecteur2(0, 0)));
+            tete.ajouterForme(new Cercle(2, new Vecteur2(0, 1.75)));
 
 
             double resultatPerimeteTete = tete.PerimetreTotale();
@@ -75,8 +76,8 @@ namespace TestGeometrie
         {
             Collection triangleTrapeze = new Collection();
 
-            triangleTrapeze.ajouterForme(new Triangle(2, 3, 3.1, 3.25), new Vecteur2(0, 0));
-            triangleTrapeze.ajouterForme(new Trapeze(4,2,1,1.1,1.8), new Vecteur2(0, 1.75));
+            triangleTrapeze.ajouterForme(new Triangle(2, 3, 3.1, 3.25, new Vecteur2(0, 0)));
+            triangleTrapeze.ajouterForme(new Trapeze(4,2,1,1.1,1.8, new Vecteur2(0, 1.75)));
 
             double resultatPerimeteTriangleTrapeze = triangleTrapeze.PerimetreTotale();
             double resultatAireTriangleTrapeze = triangleTrapeze.AireTotale();

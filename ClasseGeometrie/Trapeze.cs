@@ -23,7 +23,8 @@ namespace ClasseGeometrie.Forme
         /// <param name="hauteur">Taille de la hauteur.</param>
         /// <param name="coteA">Taille du côté A.</param>
         /// <param name="coteB">Taille du côté B.</param>
-        public Trapeze(double grandeBase, double petiteBase, double hauteur, double coteA, double coteB)
+        /// <param name="position">Position du trapèse.</param>
+        public Trapeze(double grandeBase, double petiteBase, double hauteur, double coteA, double coteB, Vecteur2 position) : base(position)
         {
             _grandeBase = grandeBase;
             _petiteBase = petiteBase;

@@ -6,12 +6,13 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-            Cercle cercle = new Cercle(2);
-            Triangle triangle = new Triangle(2,3,3.1,3.25);
-            Carre carre = new Carre(3);
-            Rectangle rectangle = new Rectangle(2,3);
-            Losange losange = new Losange(4, 3);
-            Trapeze trapeze = new Trapeze(4, 2, 1, 1.1, 1.8);
+            // 
+            Cercle cercle = new Cercle(2, new Vecteur2(0, 0));
+            Triangle triangle = new Triangle(2,3,3.1,3.25, new Vecteur2(0, 0));
+            Carre carre = new Carre(3, new Vecteur2(0, 0));
+            Rectangle rectangle = new Rectangle(2,3, new Vecteur2(0, 0));
+            Losange losange = new Losange(4, 3, new Vecteur2(0, 0));
+            Trapeze trapeze = new Trapeze(4, 2, 1, 1.1, 1.8, new Vecteur2(0, 0));
 
             Console.WriteLine(cercle);
             Console.WriteLine(triangle);
@@ -21,8 +22,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Console.WriteLine(trapeze);
 
             Collection maison = new Collection();
-            maison.ajouterForme(new Carre(2), new Vecteur2(0, 0));
-            maison.ajouterForme(new Triangle(2, 1.5, 2.5, 2.5), new Vecteur2(0, 1.75));
+            maison.ajouterForme(new Carre(2, new Vecteur2(0, 0)));
+            maison.ajouterForme(new Triangle(2, 1.5, 2.5, 2.5, new Vecteur2(0, 1.75)));
             Console.WriteLine( maison.AireTotale());
             Console.WriteLine(maison.PerimetreTotale());
 

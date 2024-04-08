@@ -11,7 +11,8 @@ namespace ClasseGeometrie.Forme
         /// Constructeur du cercle.
         /// </summary>
         /// <param name="rayon">Taille du rayon.</param>
-        public Cercle(double rayon)
+        /// <param name="position">Position du cercle.</param>
+        public Cercle(double rayon, Vecteur2 position) : base(position)
         {
             _rayon = rayon;
         }

@@ -10,13 +10,19 @@ namespace ClasseGeometrie.Forme
     {
         private double _cote;
 
+
+
+
         /// <summary>
         /// Constructeur du carré.
         /// </summary>
         /// <param name="cote">Taille d'un côté.</param>
-        public Carre(double cote)
+        /// <param name="position">Position du carré</param>
+        public Carre(double cote, Vecteur2 position) : base(position)
         {
             _cote = cote;
+
+
         }
 
         public double Cote { get => _cote; set => _cote = value; }
@@ -26,7 +32,7 @@ namespace ClasseGeometrie.Forme
             double perimetre = 4 * this.Cote;
             return perimetre;
         }
-        public  override double Aire()
+        public override double Aire()
         {
             double aire = Math.Pow(this.Cote, 2);
             return aire;
@@ -37,7 +43,7 @@ namespace ClasseGeometrie.Forme
         /// <returns>Les informations d'un carré.</returns>
         public override string ToString()
         {
-            return "Carré - Coté (c): " + this.Cote  + ", Périmètre: " + Perimetre() + ", Aire: " + Aire();
+            return "Carré - Coté (c): " + this.Cote + ", Périmètre: " + Perimetre() + ", Aire: " + Aire();
         }
     }
 }

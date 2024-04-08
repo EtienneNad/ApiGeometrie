@@ -16,7 +16,7 @@ namespace TestGeometrie
         {
             double rayon = 2;
 
-            Cercle cercle = new Cercle(rayon);
+            Cercle cercle = new Cercle(rayon, new Vecteur2(0, 0));
             double resultat = cercle.Perimetre();
 
             Assert.AreEqual(12.566, resultat, 0.01 );
@@ -28,7 +28,7 @@ namespace TestGeometrie
 
             double rayon = 2;
 
-            Cercle cercle = new Cercle(rayon);
+            Cercle cercle = new Cercle(rayon, new Vecteur2(0, 0));
             double resultat = cercle.Aire();
 
             Assert.AreEqual(12.566, resultat, 0.01);
@@ -46,7 +46,7 @@ namespace TestGeometrie
             double hauteur = 3;
             double coteA = 3.1;
             double coteC = 3.25;
-            Triangle triangle = new Triangle(baseB, hauteur,coteA,coteC);
+            Triangle triangle = new Triangle(baseB, hauteur,coteA,coteC, new Vecteur2(0, 0));
 
             double resultat = triangle.Perimetre();
             Assert.AreEqual(8.35, resultat, 0.01);
@@ -59,7 +59,7 @@ namespace TestGeometrie
             double hauteur = 3;
             double coteA = 3.1;
             double coteC = 3.25;
-            Triangle triangle = new Triangle(baseB, hauteur, coteA, coteC);
+            Triangle triangle = new Triangle(baseB, hauteur, coteA, coteC, new Vecteur2(0, 0));
 
             double resultat = triangle.Aire();
             Assert.AreEqual(3, resultat, 0.01);
@@ -75,7 +75,7 @@ namespace TestGeometrie
         {
             double cote = 3;
             
-            Carre carre = new Carre(cote);
+            Carre carre = new Carre(cote, new Vecteur2(0, 0));
             double resultat = carre.Perimetre();
 
             Assert.AreEqual(12, resultat, 0.01);
@@ -86,7 +86,7 @@ namespace TestGeometrie
         {
 
             double cote = 3;
-            Carre carre = new Carre(cote);
+            Carre carre = new Carre(cote, new Vecteur2(0, 0));
 
             double resultat = carre.Aire();
             Assert.AreEqual(9,resultat, 0.01);
@@ -103,7 +103,7 @@ namespace TestGeometrie
             {
                 double largeur = 2;
                 double hauteur = 3;
-                Rectangle rectangle = new Rectangle(largeur, hauteur);
+                Rectangle rectangle = new Rectangle(largeur, hauteur, new Vecteur2(0, 0));
                 double resultat = rectangle.Perimetre();
 
                 Assert.AreEqual(10, resultat, 0.01);
@@ -115,7 +115,7 @@ namespace TestGeometrie
                 
                 double largeur = 2;
                 double hauteur = 3;
-                Rectangle rectangle = new Rectangle(largeur, hauteur);
+                Rectangle rectangle = new Rectangle(largeur, hauteur, new Vecteur2(0, 0));
 
                 double resultat = rectangle.Aire();
                 Assert.AreEqual(6,resultat, 0.01);
@@ -131,7 +131,7 @@ namespace TestGeometrie
         {
             double grandeDiagonale = 4;
             double petiteDiagonale = 3;
-            Losange losange = new Losange(grandeDiagonale, petiteDiagonale);
+            Losange losange = new Losange(grandeDiagonale, petiteDiagonale, new Vecteur2(0, 0));
 
             double resultat = losange.Perimetre();
             Assert.AreEqual(10, resultat, 0.01);
@@ -142,7 +142,7 @@ namespace TestGeometrie
         {
             double grandeDiagonale = 4;
             double petiteDiagonale = 3;
-            Losange losange = new Losange(grandeDiagonale, petiteDiagonale);
+            Losange losange = new Losange(grandeDiagonale, petiteDiagonale, new Vecteur2(0, 0));
 
             double resultat = losange.Aire();
             Assert.AreEqual(6, resultat, 0.01);
@@ -162,7 +162,7 @@ namespace TestGeometrie
             double hauteur = 1;
             double coteA = 1.1;
             double coteB = 1.8;
-            Trapeze trapeze = new Trapeze(grandeBase, petiteBase, hauteur, coteA, coteB);
+            Trapeze trapeze = new Trapeze(grandeBase, petiteBase, hauteur, coteA, coteB, new Vecteur2(0, 0));
 
             double resultat = trapeze.Perimetre();
             Assert.AreEqual(8.9, resultat, 0.01);
@@ -176,7 +176,7 @@ namespace TestGeometrie
             double hauteur = 1;
             double coteA = 1.1;
             double coteB = 1.8;
-            Trapeze trapeze = new Trapeze(grandeBase,petiteBase,hauteur,coteA, coteB);
+            Trapeze trapeze = new Trapeze(grandeBase,petiteBase,hauteur,coteA, coteB, new Vecteur2(0, 0));
 
             double resultat = trapeze.Aire();
             Assert.AreEqual(3, resultat, 0.01);

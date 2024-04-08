@@ -10,14 +10,14 @@ namespace ClasseGeometrie.Forme
          * 
          * Peux-tu penser à une autre façon de gérer la donnée position ?
          */
-        private List<(FormeGeometrique forme, Vecteur2 position)> listeForme;
+        private List<FormeGeometrique> listeForme;
 
         /// <summary>
         /// Constructeur de collection
         /// </summary>
         public Collection()
         {
-            listeForme = new List<(FormeGeometrique forme, Vecteur2 position)>();
+            listeForme = new List<FormeGeometrique>();
         }
 
 
@@ -27,9 +27,9 @@ namespace ClasseGeometrie.Forme
         /// </summary>
         /// <param name="forme">La forme à ajouter.</param>
         /// <param name="position">La ^position de la forme</param>
-        public void ajouterForme(FormeGeometrique forme, Vecteur2 position)
+        public void ajouterForme(FormeGeometrique forme)
         {
-            listeForme.Add((forme, position));
+            listeForme.Add((forme));
         }
         /// <summary>
         /// Méthode permetant de calculer l'aire totale de toute les formes de la collection.
@@ -39,9 +39,9 @@ namespace ClasseGeometrie.Forme
         {
             double aireTotale = 0;
 
-            foreach (var (formes, position) in listeForme)
+            foreach (var forme in listeForme)
             {
-                aireTotale += formes.Aire();
+                aireTotale += forme.Aire();
             }
             return aireTotale;
         }
@@ -52,7 +52,7 @@ namespace ClasseGeometrie.Forme
         public double PerimetreTotale()
         {
             double perimetreTotale = 0;
-            foreach (var (forme, position) in listeForme)
+            foreach (var forme in listeForme)
             {
                 perimetreTotale += forme.Perimetre();
             }

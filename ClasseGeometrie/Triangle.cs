@@ -9,7 +9,7 @@ namespace ClasseGeometrie.Forme
         private double _coteA;
         private double _coteC;
 
-        
+
         /// <summary>
         /// Constructeur du triangle. 
         /// </summary>
@@ -17,7 +17,8 @@ namespace ClasseGeometrie.Forme
         /// <param name="hauteur">Taille de la hauteur.</param>
         /// <param name="coteA">Taille du côté A.</param>
         /// <param name="coteC">Taille du côté C.</param>
-        public Triangle(double baseB, double hauteur, double coteA, double coteC)
+        /// <param name="position">Position du triangle.</param>
+        public Triangle(double baseB, double hauteur, double coteA, double coteC, Vecteur2 position) : base(position)
         {
             _baseB = baseB;
             _hauteur = hauteur;
@@ -34,14 +35,12 @@ namespace ClasseGeometrie.Forme
         public override double Perimetre()
         {
             double perimetre = this.CoteA + this.BaseB + this.CoteC;
-            //perimetre = Math.Round(perimetre, 4);
             return perimetre;
         }
 
         public override double Aire()
         {
             double aire = ( this.BaseB * this.Hauteur)/2;
-            //aire = Math.Round(aire, 4);
             return aire;
         }
         /// <summary>

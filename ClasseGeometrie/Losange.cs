@@ -15,7 +15,8 @@ namespace ClasseGeometrie.Forme
         /// </summary>
         /// <param name="grandeDiagonale">Taille de la grande diagonale.</param>
         /// <param name="petiteDiagonale">Taille de la petite diagonale.</param>
-        public Losange(double grandeDiagonale, double petiteDiagonale)
+        /// <param name="position">Position du losange.</param>
+        public Losange(double grandeDiagonale, double petiteDiagonale, Vecteur2 position) : base(position)
         {
             GrandeDiagonale = grandeDiagonale;
             PetiteDiagonale = petiteDiagonale;

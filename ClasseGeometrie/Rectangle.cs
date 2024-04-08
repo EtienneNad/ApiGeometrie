@@ -15,9 +15,10 @@ namespace ClasseGeometrie.Forme
         /// Constructeur du rectangle.
         /// </summary>
         /// <param name="largeur">Taille de la Largeur.</param>
-        /// <param name="hauteur">Taille de la hauteur</param>
+        /// <param name="hauteur">Taille de la hauteur.</param>
+        /// <param name="position">Position du rectangle.</param>
 
-        public Rectangle(double largeur, double hauteur)
+        public Rectangle(double largeur, double hauteur, Vecteur2 position) : base(position)
         {
             _largeur = largeur;
             _hauteur = hauteur;
